@@ -40,33 +40,50 @@ h1 {
   margin: 0;
 }
 
+/* 🔥 Upgraded Claim Core Indicator */
 .claim-cores {
-  background: rgba(0, 255, 255, 0.05);
-  padding: 0.5rem 1rem;
-  border-radius: 12px;
-  border: 1px solid var(--card-border);
-  color: var(--accent1);
-  font-weight: bold;
+  background: linear-gradient(to right, var(--accent1), var(--accent2));
+  color: #000;
+  font-weight: 700;
+  padding: 0.5rem 1.25rem;
+  border-radius: 999px;
   font-size: 1rem;
+  box-shadow: 0 0 8px var(--accent1), 0 0 20px var(--accent2);
+  text-shadow: 0 0 2px #fff;
+  display: inline-block;
 }
 
+/* 🧩 Upgraded Version & Wallet Display */
 .top-meta {
   display: flex;
   gap: 1rem;
 }
 
-.version-pill,
-.wallet-pill {
-  background: rgba(255, 255, 255, 0.08);
-  padding: 0.4rem 0.75rem;
-  border-radius: 10px;
+.version-pill {
+  background: rgba(216, 124, 255, 0.15);
+  border: 1px solid var(--accent-purple);
+  color: var(--accent-purple);
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
   font-size: 0.85rem;
-  font-weight: 500;
-  color: var(--text);
-  border: 1px solid var(--card-border);
+  font-weight: 600;
+  box-shadow: 0 0 6px var(--accent-purple);
+  text-shadow: 0 0 2px var(--accent-purple);
 }
 
-/* =============== CARD BASE STYLES =============== */
+.wallet-pill {
+  background: rgba(0, 255, 255, 0.07);
+  border: 1px solid var(--accent1);
+  color: var(--accent1);
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  box-shadow: 0 0 6px var(--accent1);
+  text-shadow: 0 0 2px var(--accent1);
+}
+
+/* =============== GLOW BASED CARDS =============== */
 .card,
 .skill-card,
 .quest-card {
@@ -177,10 +194,18 @@ h1 {
 }
 
 /* =============== QUEST SECTION =============== */
+.quest-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
 .quest-tabs {
   display: flex;
   gap: 1rem;
-  margin-bottom: 1rem;
 }
 
 .tab {
@@ -232,13 +257,3 @@ h1 {
   color: var(--accent-blue);
   font-weight: bold;
 }
-
-.quest-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  flex-wrap: wrap;
-}
-
