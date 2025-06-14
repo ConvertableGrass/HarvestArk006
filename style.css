@@ -62,3 +62,11 @@ button:hover {
   transform: scale(1.05);
   box-shadow: 0 0 12px var(--accent2);
 }
+
+.version-tag {
+  font-size: 0.9rem;
+  color: var(--accent2);
+  margin-top: -0.75rem;
+  margin-bottom: 1rem;
+  opacity: 0.75;
+}
