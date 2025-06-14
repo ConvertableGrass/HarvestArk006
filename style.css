@@ -36,14 +36,22 @@ body {
 .logo {
   width: 100px;
   height: auto;
-  margin-bottom: 0.25rem; /* reduced spacing */
+  margin-bottom: 0; /* tightened spacing */
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 1.8rem;
+  margin: 0.25rem 0 0;
   background: linear-gradient(to right, var(--accent1), var(--accent2));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.version-tag {
+  font-size: 0.85rem;
+  color: var(--accent2);
+  margin: 0.1rem 0 0.5rem;
+  opacity: 0.75;
 }
 
 button {
@@ -62,12 +70,3 @@ button:hover {
   transform: scale(1.05);
   box-shadow: 0 0 12px var(--accent2);
 }
-
-.version-tag {
-  font-size: 0.9rem;
-  color: var(--accent2);
-  margin-top: 0.1rem;
-  margin-bottom: 0.75rem;
-  opacity: 0.75;
-}
-
