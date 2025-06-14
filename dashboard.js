@@ -13,16 +13,15 @@ document.querySelectorAll('.quest-tabs .tab').forEach(button => {
   });
 });
 
-// Future implementation placeholder: Load wallet address and Claim Core balance
-window.addEventListener('load', () => {
-  const wallet = localStorage.getItem("walletAddress");
-  const balance = localStorage.getItem("claimCores");
-
+window.addEventListener('DOMContentLoaded', () => {
+  const wallet = localStorage.getItem('walletAddress');
   if (wallet) {
-    document.querySelector(".wallet-pill").textContent = wallet.slice(0, 6) + "…" + wallet.slice(-4);
+    const walletPill = document.querySelector('.wallet-pill');
+    walletPill.textContent = wallet.slice(0, 6) + '…' + wallet.slice(-4);
   }
 
-  if (balance) {
-    document.getElementById("claimCores").textContent = Number(balance).toLocaleString();
-  }
+  // You can also store & use Claim Cores like this:
+  const claimCores = localStorage.getItem('claimCores') || '12,584';
+  document.getElementById('claimCores').textContent = claimCores;
 });
+
