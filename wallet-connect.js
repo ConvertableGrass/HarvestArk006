@@ -1,5 +1,5 @@
 const APP_NAME = "Harvest Ark";
-const APP_LOGO_URL = "logo.png"; // replace with your hosted logo if needed
+const APP_LOGO_URL = "./assets/logo.png"; // replace with your hosted logo if needed
 const DEFAULT_CHAIN_ID = 1;
 
 const walletLink = new window.CoinbaseWalletSDK({
