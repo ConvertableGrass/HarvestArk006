@@ -23,5 +23,10 @@ window.addEventListener('DOMContentLoaded', () => {
   // You can also store & use Claim Cores like this:
   const claimCores = localStorage.getItem('claimCores') || '12,584';
   document.getElementById('claimCores').textContent = claimCores;
+  
+  function updateClaimCores(amount) {
+  localStorage.setItem('claimCores', amount);
+  document.getElementById('claimCores').textContent = amount;
+}
 });
 
