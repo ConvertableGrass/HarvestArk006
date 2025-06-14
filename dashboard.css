@@ -232,3 +232,13 @@ h1 {
   color: var(--accent-blue);
   font-weight: bold;
 }
+
+.quest-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
