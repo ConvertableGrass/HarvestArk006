@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ark Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dashboard">
+  <div class="top-bar">
+    <div class="claim-cores">🔗 <span id="claimCores">12,584</span> Claim Cores</div>
+    <h1><span class="ark">Ark</span> <span class="dashboard-label">Dashboard</span></h1>
+    <div class="top-meta">
+      <span class="version-pill">v3.3.6</span>
+      <span class="wallet-pill">0x742d…8f3a</span>
+    </div>
+  </div>
+
+  <div class="level-overall card">
+    <div class="level-info">
+      <div>
+        <h2>Overall Level 47</h2>
+        <p>Total Experience Points</p>
+      </div>
+      <div class="xp-right">
+        <strong>156,420</strong><br/><span>/ 175,000 XP</span>
+      </div>
+    </div>
+    <div class="progress-bar">
+      <div class="progress-fill" style="width: 89%;"></div>
+    </div>
+  </div>
+
+  <h3 class="section-title glow-blue">⚡ Skill Levels</h3>
+  <div class="skill-grid">
+    <div class="skill-card">🌱 <strong>Farming</strong><br/>Level 32<br/><span>45,600 / 52,000 XP</span></div>
+    <div class="skill-card">🧭 <strong>Exploring</strong><br/>Level 28<br/><span>38,200 / 45,000 XP</span></div>
+    <div class="skill-card">⛏️ <strong>Mining</strong><br/>Level 41<br/><span>67,300 / 72,000 XP</span></div>
+    <div class="skill-card">⚔️ <strong>Combat</strong><br/>Level 55<br/><span>89,400 / 95,000 XP</span></div>
+    <div class="skill-card">🔧 <strong>Crafting</strong><br/>Level 24<br/><span>22,100 / 28,000 XP</span></div>
+  </div>
+
+  <h3 class="section-title glow-purple">👑 Quests</h3>
+  <div class="quest-tabs">
+    <button class="tab active">Level Quests</button>
+    <button class="tab">Achievement Quests</button>
+  </div>
+
+  <div class="quests">
+    <div class="quest-card">
+      <h4>Reach Combat Level 60</h4>
+      <p>Train your combat skills to reach level 60</p>
+      <div class="progress-bar"><div class="progress-fill" style="width: 92%;"></div></div>
+      <span class="reward">+5000 XP + Rare Sword</span>
+    </div>
+    <div class="quest-card">
+      <h4>Master Farmer</h4>
+      <p>Reach level 35 in Farming</p>
+      <div class="progress-bar"><div class="progress-fill" style="width: 91%;"></div></div>
+      <span class="reward">+3000 XP + Golden Seeds</span>
+    </div>
+    <div class="quest-card">
+      <h4>Mining Expertise</h4>
+      <p>Reach level 45 in Mining</p>
+      <div class="progress-bar"><div class="progress-fill" style="width: 91%;"></div></div>
+      <span class="reward">+4000 XP + Diamond Pickaxe</span>
+    </div>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
