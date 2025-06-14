@@ -8,7 +8,9 @@
 </head>
 <body class="dashboard">
   <div class="top-bar">
-    <div class="claim-cores">🪙 <span id="claimCores">12,584</span> Claim Cores</div>
+    <div class="claim-cores">
+      <span id="claimCores">12,584</span> Claim Cores
+    </div>
     <h1><span class="ark">Ark</span> <span class="dashboard-label">Dashboard</span></h1>
     <div class="top-meta">
       <span class="version-pill">v3.3.6</span>
@@ -33,25 +35,30 @@
 
   <h3 class="section-title glow-blue">⚡ Skill Levels</h3>
   <div class="skill-grid">
-    <div class="skill-card">🌱 <strong>Farming</strong><br/>Level 32<br/><span>45,600 / 52,000 XP</span></div>
-    <div class="skill-card">🧭 <strong>Exploring</strong><br/>Level 28<br/><span>38,200 / 45,000 XP</span></div>
-    <div class="skill-card">⛏️ <strong>Mining</strong><br/>Level 41<br/><span>67,300 / 72,000 XP</span></div>
-    <div class="skill-card">⚔️ <strong>Combat</strong><br/>Level 55<br/><span>89,400 / 95,000 XP</span></div>
-    <div class="skill-card">🔧 <strong>Crafting</strong><br/>Level 24<br/><span>22,100 / 28,000 XP</span></div>
-  </div>
-
-<div class="quest-header">
-  <h3 class="section-title glow-purple">👑 Active Quests</h3>
-  <div class="quest-controls">
-    <button class="view-all">View All</button>
-    <div class="quest-tabs">
-      <button class="tab active">Level Quests</button>
-      <button class="tab">Achievement Quests</button>
+    <div class="skill-card">🌱 <strong>Farming</strong><br/>Level 32<br/><span>45,600 / 52,000 XP</span>
+    </div>
+    <div class="skill-card">🧭 <strong>Exploring</strong><br/>Level 28<br/><span>38,200 / 45,000 XP</span>
+    </div>
+    <div class="skill-card">⛏️ <strong>Mining</strong><br/>Level 41<br/><span>67,300 / 72,000 XP</span>
+    </div>
+    <div class="skill-card">⚔️ <strong>Combat</strong><br/>Level 55<br/><span>89,400 / 95,000 XP</span>
+    </div>
+    <div class="skill-card">🔧 <strong>Crafting</strong><br/>Level 24<br/><span>22,100 / 28,000 XP</span>
     </div>
   </div>
-</div>
 
-  <div class="quests">
+  <div class="quest-header">
+    <h3 class="section-title glow-purple">👑 Active Quests</h3>
+    <div class="quest-controls">
+      <button class="view-all">View All</button>
+      <div class="quest-tabs">
+        <button class="tab active">Level Quests</button>
+        <button class="tab">Achievement Quests</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="quests" id="level-quests">
     <div class="quest-card">
       <h4>Reach Combat Level 60</h4>
       <p>Train your combat skills to reach level 60</p>
@@ -69,6 +76,21 @@
       <p>Reach level 45 in Mining</p>
       <div class="progress-bar"><div class="progress-fill" style="width: 91%;"></div></div>
       <span class="reward">+4000 XP + Diamond Pickaxe</span>
+    </div>
+  </div>
+
+  <div class="quests hidden" id="achievement-quests">
+    <div class="quest-card">
+      <h4>First Blood</h4>
+      <p>Defeat your first dungeon boss</p>
+      <div class="progress-bar"><div class="progress-fill" style="width: 100%;"></div></div>
+      <span class="reward">+250 XP + Wooden Charm</span>
+    </div>
+    <div class="quest-card">
+      <h4>Treasure Hunter</h4>
+      <p>Open 10 loot chests</p>
+      <div class="progress-bar"><div class="progress-fill" style="width: 70%;"></div></div>
+      <span class="reward">+600 XP + Mystery Box</span>
     </div>
   </div>
 
