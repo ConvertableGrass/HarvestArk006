@@ -1,29 +1,27 @@
-const APP_NAME = 'Harvest Ark';
-const APP_LOGO_URL = 'logo.png';
+const APP_NAME = "Harvest Ark";
+const APP_LOGO_URL = "logo.png"; // replace with your hosted logo if needed
+const DEFAULT_CHAIN_ID = 1;
 
-const walletLink = new window.WalletLink({
+const walletLink = new window.CoinbaseWalletSDK({
   appName: APP_NAME,
   appLogoUrl: APP_LOGO_URL,
+  darkMode: true
 });
 
 const ethereum = walletLink.makeWeb3Provider(
-  'https://mainnet.infura.io/v3/your-infura-id', // Replace with any valid RPC (or dummy)
-  1
+  "https://mainnet.infura.io/v3/YOUR_INFURA_ID", DEFAULT_CHAIN_ID
 );
 
-async function connectWallet() {
+document.getElementById("connect-wallet").addEventListener("click", async () => {
   try {
-    const accounts = await ethereum.enable();
+    const accounts = await ethereum.request({ method: "eth_requestAccounts" });
     const walletAddress = accounts[0];
-
-    // Store in localStorage so dashboard can access it
-    localStorage.setItem('walletAddress', walletAddress);
-
-    // Redirect to dashboard
-    window.location.href = 'dashboard.html';
+    localStorage.setItem("walletAddress", walletAddress);
+    alert(`Wallet connected: ${walletAddress}`);
+    // Redirect to dashboard or load save data
+    window.location.href = "transition.html";
   } catch (err) {
-    console.error('Wallet connection error:', err);
+    console.error("Wallet connection failed:", err);
+    alert("Connection failed. Make sure Coinbase Wallet is installed.");
   }
-}
-
-document.getElementById('connect-wallet').addEventListener('click', connectWallet);
+});
