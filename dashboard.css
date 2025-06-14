@@ -281,3 +281,7 @@ h1 {
   transform: scale(1.05);
   box-shadow: 0 0 15px var(--accent2);
 }
+
+.hidden {
+  display: none;
+}
