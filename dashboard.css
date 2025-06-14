@@ -40,7 +40,7 @@ h1 {
   margin: 0;
 }
 
-/* 🔥 Upgraded Claim Core Indicator */
+/* ðŸ”¥ Upgraded Claim Core Indicator */
 .claim-cores {
   background: linear-gradient(to right, var(--accent1), var(--accent2));
   color: #000;
@@ -53,7 +53,7 @@ h1 {
   display: inline-block;
 }
 
-/* 🧩 Upgraded Version & Wallet Display */
+/* ðŸ§© Upgraded Version & Wallet Display */
 .top-meta {
   display: flex;
   gap: 1rem;
