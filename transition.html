@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Loading Harvest Ark...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      flex-direction: column;
+      font-family: var(--font);
+    }
+
+    .loader {
+      width: 80px;
+      height: 80px;
+      border: 8px solid rgba(255, 255, 255, 0.1);
+      border-top: 8px solid var(--accent1);
+      border-bottom: 8px solid var(--accent2);
+      border-radius: 50%;
+      animation: spin 1.5s linear infinite;
+      margin-bottom: 1.5rem;
+    }
+
+    @keyframes spin {
+      0%   { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .text-sequence {
+      text-align: center;
+      font-size: 1.2rem;
+      max-width: 80%;
+      animation: fadeIn 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes fadeIn {
+      0%   { opacity: 0.4; }
+      100% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="loader"></div>
+  <div class="text-sequence" id="status-text">Connecting to your wallet...</div>
+
+  <script>
+    const messages = [
+      "Connecting to your wallet...",
+      "Authenticating Claim Core account...",
+      "Loading hydroponic farm data...",
+      "Initializing mining scanner...",
+      "Booting Harvest Ark systems..."
+    ];
+
+    let current = 0;
+    const statusText = document.getElementById("status-text");
+
+    const cycleMessages = () => {
+      statusText.textContent = messages[current];
+      current++;
+      if (current < messages.length) {
+        setTimeout(cycleMessages, 1500);
+      } else {
+        setTimeout(() => {
+          window.location.href = "dashboard.html"; // replace with actual main game page
+        }, 1500);
+      }
+    };
+
+    window.onload = () => {
+      setTimeout(cycleMessages, 1500);
+    };
+  </script>
+</body>
+</html>
